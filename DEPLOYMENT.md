@@ -27,16 +27,33 @@ sudo usermod -aG docker $USER
 # Устанавливаем Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+# Перезагружаемся или выходим/входим для применения группы docker
 ```
 
-#### Создание директории проекта
+#### Автоматическая настройка проекта
 ```bash
-mkdir -p /path/to/your/project
-cd /path/to/your/project
+# Клонируем репозиторий (только для получения скрипта настройки)
+git clone https://github.com/Bexull/Report_Bot.git temp-setup
+cd temp-setup
+
+# Запускаем скрипт настройки
+chmod +x scripts/setup-server.sh
+./scripts/setup-server.sh
+
+# Удаляем временную директорию
+cd ..
+rm -rf temp-setup
 ```
 
-#### Создание docker-compose.yml на сервере
-```yaml
+#### Ручная настройка (альтернатива)
+```bash
+# Создаем директорию проекта
+mkdir -p ~/calculation-bot
+cd ~/calculation-bot
+
+# Создаем docker-compose.yml
+cat > docker-compose.yml << 'EOF'
 version: '3.8'
 
 services:
@@ -49,19 +66,28 @@ services:
       - DATABASE_URL=${DATABASE_URL}
     volumes:
       - ./data:/app/data
+      - ./logs:/app/logs
     networks:
       - bot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 networks:
   bot-network:
     driver: bridge
-```
+EOF
 
-#### Создание .env файла на сервере
-```bash
-# Создайте файл .env с вашими переменными окружения
+# Создаем .env файл
+cat > .env << 'EOF'
 BOT_TOKEN=your_bot_token_here
 DATABASE_URL=your_database_url_here
+EOF
+
+# Создаем директории
+mkdir -p data logs
 ```
 
 ### 3. Настройка SSH ключей

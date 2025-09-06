@@ -77,15 +77,4 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-  deploy:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Deploy to production
-      run: |
-        echo "Deploying to production..."
-        echo "Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
-        # Здесь добавьте команды для деплоя на ваш сервер
-        # Например, обновление Docker Compose или Kubernetes
+  # Deploy job удален - деплой происходит через отдельный workflow deploy.yml
