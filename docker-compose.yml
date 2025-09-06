@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  calculation-bot:
+    build: .
+    container_name: calculation-merch-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Монтируем весь проект для разработки
+      - .:/app:ro
+      # Исключаем ненужные папки через .dockerignore
+    # Если нужно подключиться к внешней БД, убедитесь что хост доступен
+    # networks:
+    #   - bot-network
+
+# networks:
+#   bot-network:
+#     driver: bridge
