@@ -23,7 +23,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /root/calculation_bot
+          cd /root/Report_Bot
           git pull origin master
           docker-compose pull
           docker-compose up -d
