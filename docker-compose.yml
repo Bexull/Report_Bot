@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   calculation-bot:
-    image: ghcr.io/bexull/report_bot:latest
+    image: ghcr.io/bexull/calculation_bot:latest
     container_name: calculation-bot
     restart: unless-stopped
     environment:
