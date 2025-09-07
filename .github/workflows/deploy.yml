@@ -23,7 +23,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /path/to/your/project
+          cd /root/calculation_bot
+          git pull origin master
           docker-compose pull
           docker-compose up -d
           docker system prune -f
