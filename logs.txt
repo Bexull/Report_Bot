@@ -1,0 +1,922 @@
+2025-09-07T13:08:46.2991992Z Current runner version: '2.328.0'
+2025-09-07T13:08:46.3023250Z ##[group]Runner Image Provisioner
+2025-09-07T13:08:46.3024363Z Hosted Compute Agent
+2025-09-07T13:08:46.3025183Z Version: 20250829.383
+2025-09-07T13:08:46.3026067Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-07T13:08:46.3027396Z Build Date: 2025-08-29T13:48:48Z
+2025-09-07T13:08:46.3028294Z ##[endgroup]
+2025-09-07T13:08:46.3029238Z ##[group]Operating System
+2025-09-07T13:08:46.3030293Z Ubuntu
+2025-09-07T13:08:46.3030986Z 24.04.3
+2025-09-07T13:08:46.3031661Z LTS
+2025-09-07T13:08:46.3032472Z ##[endgroup]
+2025-09-07T13:08:46.3033283Z ##[group]Runner Image
+2025-09-07T13:08:46.3034066Z Image: ubuntu-24.04
+2025-09-07T13:08:46.3034943Z Version: 20250831.1.0
+2025-09-07T13:08:46.3036614Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250831.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-07T13:08:46.3039549Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250831.1
+2025-09-07T13:08:46.3041182Z ##[endgroup]
+2025-09-07T13:08:46.3042970Z ##[group]GITHUB_TOKEN Permissions
+2025-09-07T13:08:46.3045333Z Contents: read
+2025-09-07T13:08:46.3046324Z Metadata: read
+2025-09-07T13:08:46.3047111Z Packages: write
+2025-09-07T13:08:46.3047887Z ##[endgroup]
+2025-09-07T13:08:46.3051381Z Secret source: Actions
+2025-09-07T13:08:46.3052410Z Prepare workflow directory
+2025-09-07T13:08:46.3759075Z Prepare all required actions
+2025-09-07T13:08:46.3813456Z Getting action download info
+2025-09-07T13:08:46.7129469Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-09-07T13:08:46.8982216Z Download action repository 'docker/setup-buildx-action@v3' (SHA:e468171a9de216ec08956ac3ada2f0791b6bd435)
+2025-09-07T13:08:47.1869969Z Download action repository 'docker/login-action@v3' (SHA:184bdaa0721073962dff0199f1fb9940f07167d1)
+2025-09-07T13:08:47.4716260Z Download action repository 'docker/metadata-action@v5' (SHA:c1e51972afc2121e065aed6d45c65596fe445f3f)
+2025-09-07T13:08:47.7647735Z Download action repository 'docker/build-push-action@v5' (SHA:ca052bb54ab0790a636c9b5f226502c73d547a25)
+2025-09-07T13:08:48.1279934Z Complete job name: build-and-push
+2025-09-07T13:08:48.1977861Z ##[group]Run actions/checkout@v4
+2025-09-07T13:08:48.1979371Z with:
+2025-09-07T13:08:48.1980122Z   repository: Bexull/Report_Bot
+2025-09-07T13:08:48.1981291Z   token: ***
+2025-09-07T13:08:48.1982026Z   ssh-strict: true
+2025-09-07T13:08:48.1982797Z   ssh-user: git
+2025-09-07T13:08:48.1983622Z   persist-credentials: true
+2025-09-07T13:08:48.1984485Z   clean: true
+2025-09-07T13:08:48.1985279Z   sparse-checkout-cone-mode: true
+2025-09-07T13:08:48.1986234Z   fetch-depth: 1
+2025-09-07T13:08:48.1986981Z   fetch-tags: false
+2025-09-07T13:08:48.1987751Z   show-progress: true
+2025-09-07T13:08:48.1988535Z   lfs: false
+2025-09-07T13:08:48.1989432Z   submodules: false
+2025-09-07T13:08:48.1990231Z   set-safe-directory: true
+2025-09-07T13:08:48.1991363Z env:
+2025-09-07T13:08:48.1992050Z   REGISTRY: ghcr.io
+2025-09-07T13:08:48.1992878Z   IMAGE_NAME: Bexull/Report_Bot
+2025-09-07T13:08:48.1993765Z ##[endgroup]
+2025-09-07T13:08:48.3118760Z Syncing repository: Bexull/Report_Bot
+2025-09-07T13:08:48.3122656Z ##[group]Getting Git version info
+2025-09-07T13:08:48.3124020Z Working directory is '/home/runner/work/Report_Bot/Report_Bot'
+2025-09-07T13:08:48.3126041Z [command]/usr/bin/git version
+2025-09-07T13:08:48.3189871Z git version 2.51.0
+2025-09-07T13:08:48.3217366Z ##[endgroup]
+2025-09-07T13:08:48.3241810Z Temporarily overriding HOME='/home/runner/work/_temp/c5b801a8-0901-47bd-a246-0c79bee235ca' before making global git config changes
+2025-09-07T13:08:48.3246517Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-07T13:08:48.3250541Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Report_Bot/Report_Bot
+2025-09-07T13:08:48.3287693Z Deleting the contents of '/home/runner/work/Report_Bot/Report_Bot'
+2025-09-07T13:08:48.3291373Z ##[group]Initializing the repository
+2025-09-07T13:08:48.3305737Z [command]/usr/bin/git init /home/runner/work/Report_Bot/Report_Bot
+2025-09-07T13:08:48.3415732Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-07T13:08:48.3417622Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-07T13:08:48.3419624Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-07T13:08:48.3421007Z hint:
+2025-09-07T13:08:48.3422380Z hint: 	git config --global init.defaultBranch <name>
+2025-09-07T13:08:48.3423677Z hint:
+2025-09-07T13:08:48.3424706Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-07T13:08:48.3426474Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-07T13:08:48.3427946Z hint:
+2025-09-07T13:08:48.3428670Z hint: 	git branch -m <name>
+2025-09-07T13:08:48.3429759Z hint:
+2025-09-07T13:08:48.3431080Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-07T13:08:48.3433365Z Initialized empty Git repository in /home/runner/work/Report_Bot/Report_Bot/.git/
+2025-09-07T13:08:48.3436362Z [command]/usr/bin/git remote add origin https://github.com/Bexull/Report_Bot
+2025-09-07T13:08:48.3472022Z ##[endgroup]
+2025-09-07T13:08:48.3473541Z ##[group]Disabling automatic garbage collection
+2025-09-07T13:08:48.3475282Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-07T13:08:48.3503753Z ##[endgroup]
+2025-09-07T13:08:48.3505018Z ##[group]Setting up auth
+2025-09-07T13:08:48.3510189Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-07T13:08:48.3541650Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-07T13:08:48.3862399Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-07T13:08:48.3892126Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-07T13:08:48.4110491Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-07T13:08:48.4144860Z ##[endgroup]
+2025-09-07T13:08:48.4146194Z ##[group]Fetching the repository
+2025-09-07T13:08:48.4154049Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +72958baa1b3e9d1878f1b1686c7d3cd928fba0d1:refs/remotes/origin/master
+2025-09-07T13:08:48.5843544Z From https://github.com/Bexull/Report_Bot
+2025-09-07T13:08:48.5846045Z  * [new ref]         72958baa1b3e9d1878f1b1686c7d3cd928fba0d1 -> origin/master
+2025-09-07T13:08:48.5875194Z ##[endgroup]
+2025-09-07T13:08:48.5876920Z ##[group]Determining the checkout info
+2025-09-07T13:08:48.5878408Z ##[endgroup]
+2025-09-07T13:08:48.5881788Z [command]/usr/bin/git sparse-checkout disable
+2025-09-07T13:08:48.5920270Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-07T13:08:48.5948376Z ##[group]Checking out the ref
+2025-09-07T13:08:48.5952070Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-09-07T13:08:48.6032677Z Reset branch 'master'
+2025-09-07T13:08:48.6035760Z branch 'master' set up to track 'origin/master'.
+2025-09-07T13:08:48.6041518Z ##[endgroup]
+2025-09-07T13:08:48.6073997Z [command]/usr/bin/git log -1 --format=%H
+2025-09-07T13:08:48.6095247Z 72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+2025-09-07T13:08:48.6362070Z ##[group]Run docker/setup-buildx-action@v3
+2025-09-07T13:08:48.6363290Z with:
+2025-09-07T13:08:48.6364094Z   driver: docker-container
+2025-09-07T13:08:48.6365000Z   install: false
+2025-09-07T13:08:48.6365866Z   use: true
+2025-09-07T13:08:48.6366655Z   keep-state: false
+2025-09-07T13:08:48.6367515Z   cache-binary: true
+2025-09-07T13:08:48.6368368Z   cleanup: true
+2025-09-07T13:08:48.6369391Z env:
+2025-09-07T13:08:48.6370334Z   REGISTRY: ghcr.io
+2025-09-07T13:08:48.6371261Z   IMAGE_NAME: Bexull/Report_Bot
+2025-09-07T13:08:48.6372228Z ##[endgroup]
+2025-09-07T13:08:48.9194606Z ##[group]Docker info
+2025-09-07T13:08:48.9219893Z [command]/usr/bin/docker version
+2025-09-07T13:08:49.0156097Z Client: Docker Engine - Community
+2025-09-07T13:08:49.0159193Z  Version:           28.0.4
+2025-09-07T13:08:49.0161000Z  API version:       1.48
+2025-09-07T13:08:49.0162297Z  Go version:        go1.23.7
+2025-09-07T13:08:49.0163334Z  Git commit:        b8034c0
+2025-09-07T13:08:49.0164515Z  Built:             Tue Mar 25 15:07:16 2025
+2025-09-07T13:08:49.0165601Z  OS/Arch:           linux/amd64
+2025-09-07T13:08:49.0166606Z  Context:           default
+2025-09-07T13:08:49.0167170Z 
+2025-09-07T13:08:49.0167987Z Server: Docker Engine - Community
+2025-09-07T13:08:49.0169455Z  Engine:
+2025-09-07T13:08:49.0170336Z   Version:          28.0.4
+2025-09-07T13:08:49.0171349Z   API version:      1.48 (minimum version 1.24)
+2025-09-07T13:08:49.0172509Z   Go version:       go1.23.7
+2025-09-07T13:08:49.0173498Z   Git commit:       6430e49
+2025-09-07T13:08:49.0174459Z   Built:            Tue Mar 25 15:07:16 2025
+2025-09-07T13:08:49.0175530Z   OS/Arch:          linux/amd64
+2025-09-07T13:08:49.0254807Z   Experimental:     false
+2025-09-07T13:08:49.0256269Z  containerd:
+2025-09-07T13:08:49.0257562Z   Version:          1.7.27
+2025-09-07T13:08:49.0259441Z   GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+2025-09-07T13:08:49.0261364Z  runc:
+2025-09-07T13:08:49.0262532Z   Version:          1.2.5
+2025-09-07T13:08:49.0263874Z   GitCommit:        v1.2.5-0-g59923ef
+2025-09-07T13:08:49.0264812Z  docker-init:
+2025-09-07T13:08:49.0265519Z   Version:          0.19.0
+2025-09-07T13:08:49.0266345Z   GitCommit:        de40ad0
+2025-09-07T13:08:49.0267860Z [command]/usr/bin/docker info
+2025-09-07T13:08:51.9432908Z Client: Docker Engine - Community
+2025-09-07T13:08:51.9435322Z  Version:    28.0.4
+2025-09-07T13:08:51.9435791Z  Context:    default
+2025-09-07T13:08:51.9436298Z  Debug Mode: false
+2025-09-07T13:08:51.9436728Z  Plugins:
+2025-09-07T13:08:51.9437160Z   buildx: Docker Buildx (Docker Inc.)
+2025-09-07T13:08:51.9437722Z     Version:  v0.27.0
+2025-09-07T13:08:51.9438279Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2025-09-07T13:08:51.9444291Z   compose: Docker Compose (Docker Inc.)
+2025-09-07T13:08:51.9445022Z     Version:  v2.38.2
+2025-09-07T13:08:51.9445682Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2025-09-07T13:08:51.9446196Z 
+2025-09-07T13:08:51.9446388Z Server:
+2025-09-07T13:08:51.9446820Z  Containers: 0
+2025-09-07T13:08:51.9447238Z   Running: 0
+2025-09-07T13:08:51.9447741Z   Paused: 0
+2025-09-07T13:08:51.9448181Z   Stopped: 0
+2025-09-07T13:08:51.9448627Z  Images: 0
+2025-09-07T13:08:51.9449279Z  Server Version: 28.0.4
+2025-09-07T13:08:51.9449833Z  Storage Driver: overlay2
+2025-09-07T13:08:51.9450364Z   Backing Filesystem: extfs
+2025-09-07T13:08:51.9450902Z   Supports d_type: true
+2025-09-07T13:08:51.9451388Z   Using metacopy: false
+2025-09-07T13:08:51.9452095Z   Native Overlay Diff: false
+2025-09-07T13:08:51.9452564Z   userxattr: false
+2025-09-07T13:08:51.9452978Z  Logging Driver: json-file
+2025-09-07T13:08:51.9453412Z  Cgroup Driver: systemd
+2025-09-07T13:08:51.9453839Z  Cgroup Version: 2
+2025-09-07T13:08:51.9454248Z  Plugins:
+2025-09-07T13:08:51.9454712Z   Volume: local
+2025-09-07T13:08:51.9455206Z   Network: bridge host ipvlan macvlan null overlay
+2025-09-07T13:08:51.9455994Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2025-09-07T13:08:51.9456648Z  Swarm: inactive
+2025-09-07T13:08:51.9457649Z  Runtimes: io.containerd.runc.v2 runc
+2025-09-07T13:08:51.9458243Z  Default Runtime: runc
+2025-09-07T13:08:51.9458678Z  Init Binary: docker-init
+2025-09-07T13:08:51.9459488Z  containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+2025-09-07T13:08:51.9460095Z  runc version: v1.2.5-0-g59923ef
+2025-09-07T13:08:51.9460556Z  init version: de40ad0
+2025-09-07T13:08:51.9460974Z  Security Options:
+2025-09-07T13:08:51.9461629Z   apparmor
+2025-09-07T13:08:51.9461977Z   seccomp
+2025-09-07T13:08:51.9462335Z    Profile: builtin
+2025-09-07T13:08:51.9462716Z   cgroupns
+2025-09-07T13:08:51.9463077Z  Kernel Version: 6.11.0-1018-azure
+2025-09-07T13:08:51.9463565Z  Operating System: Ubuntu 24.04.3 LTS
+2025-09-07T13:08:51.9464037Z  OSType: linux
+2025-09-07T13:08:51.9464424Z  Architecture: x86_64
+2025-09-07T13:08:51.9464806Z  CPUs: 4
+2025-09-07T13:08:51.9465165Z  Total Memory: 15.62GiB
+2025-09-07T13:08:51.9465595Z  Name: pkrvm7jw40e0xgp
+2025-09-07T13:08:51.9466060Z  ID: 33a18c03-7dc8-4ab9-bfe1-99342b7c1aaf
+2025-09-07T13:08:51.9466587Z  Docker Root Dir: /var/lib/docker
+2025-09-07T13:08:51.9467050Z  Debug Mode: false
+2025-09-07T13:08:51.9467327Z  Username: githubactions
+2025-09-07T13:08:51.9467577Z  Experimental: false
+2025-09-07T13:08:51.9467814Z  Insecure Registries:
+2025-09-07T13:08:51.9471950Z   ::1/128
+2025-09-07T13:08:51.9472323Z   127.0.0.0/8
+2025-09-07T13:08:51.9472694Z  Live Restore Enabled: false
+2025-09-07T13:08:51.9472998Z 
+2025-09-07T13:08:51.9473697Z ##[endgroup]
+2025-09-07T13:08:52.0712740Z ##[group]Buildx version
+2025-09-07T13:08:52.0740645Z [command]/usr/bin/docker buildx version
+2025-09-07T13:08:52.1311550Z github.com/docker/buildx v0.27.0 bac71def78b077ee6a2607119f88e291861b18ac
+2025-09-07T13:08:52.1343223Z ##[endgroup]
+2025-09-07T13:08:52.1502877Z ##[group]Inspecting default docker context
+2025-09-07T13:08:52.1655721Z [
+2025-09-07T13:08:52.1656104Z   {
+2025-09-07T13:08:52.1656438Z     "Name": "default",
+2025-09-07T13:08:52.1656824Z     "Metadata": {},
+2025-09-07T13:08:52.1657276Z     "Endpoints": {
+2025-09-07T13:08:52.1657633Z       "docker": {
+2025-09-07T13:08:52.1658050Z         "Host": "unix:///var/run/docker.sock",
+2025-09-07T13:08:52.1658566Z         "SkipTLSVerify": false
+2025-09-07T13:08:52.1659284Z       }
+2025-09-07T13:08:52.1659595Z     },
+2025-09-07T13:08:52.1659905Z     "TLSMaterial": {},
+2025-09-07T13:08:52.1660265Z     "Storage": {
+2025-09-07T13:08:52.1660633Z       "MetadataPath": "<IN MEMORY>",
+2025-09-07T13:08:52.1661142Z       "TLSPath": "<IN MEMORY>"
+2025-09-07T13:08:52.1661531Z     }
+2025-09-07T13:08:52.1661864Z   }
+2025-09-07T13:08:52.1662144Z ]
+2025-09-07T13:08:52.1662887Z ##[endgroup]
+2025-09-07T13:08:52.1663552Z ##[group]Creating a new builder instance
+2025-09-07T13:08:52.3255889Z [command]/usr/bin/docker buildx create --name builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9 --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
+2025-09-07T13:08:52.4256568Z builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9
+2025-09-07T13:08:52.4292137Z ##[endgroup]
+2025-09-07T13:08:52.4292843Z ##[group]Booting builder
+2025-09-07T13:08:52.4330893Z [command]/usr/bin/docker buildx inspect --bootstrap --builder builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9
+2025-09-07T13:08:52.5011291Z #1 [internal] booting buildkit
+2025-09-07T13:08:52.6513722Z #1 pulling image moby/buildkit:buildx-stable-1
+2025-09-07T13:08:54.4543805Z #1 pulling image moby/buildkit:buildx-stable-1 2.0s done
+2025-09-07T13:08:54.6051336Z #1 creating container buildx_buildkit_builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90
+2025-09-07T13:08:54.7108291Z #1 creating container buildx_buildkit_builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90 0.3s done
+2025-09-07T13:08:54.7216782Z #1 DONE 2.2s
+2025-09-07T13:08:54.7483403Z Name:          builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9
+2025-09-07T13:08:54.7483940Z Driver:        docker-container
+2025-09-07T13:08:54.7484839Z Last Activity: 2025-09-07 13:08:52 +0000 UTC
+2025-09-07T13:08:54.7485626Z 
+2025-09-07T13:08:54.7486247Z Nodes:
+2025-09-07T13:08:54.7486949Z Name:                  builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90
+2025-09-07T13:08:54.7487521Z Endpoint:              unix:///var/run/docker.sock
+2025-09-07T13:08:54.7487943Z Status:                running
+2025-09-07T13:08:54.7488504Z BuildKit daemon flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+2025-09-07T13:08:54.7489224Z BuildKit version:      v0.23.2
+2025-09-07T13:08:54.7489765Z Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/386
+2025-09-07T13:08:54.7490080Z Labels:
+2025-09-07T13:08:54.7490313Z  org.mobyproject.buildkit.worker.executor:         oci
+2025-09-07T13:08:54.7490692Z  org.mobyproject.buildkit.worker.hostname:         3d26d870c5d9
+2025-09-07T13:08:54.7491061Z  org.mobyproject.buildkit.worker.network:          host
+2025-09-07T13:08:54.7491434Z  org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+2025-09-07T13:08:54.7491819Z  org.mobyproject.buildkit.worker.selinux.enabled:  false
+2025-09-07T13:08:54.7492192Z  org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+2025-09-07T13:08:54.7492504Z GC Policy rule#0:
+2025-09-07T13:08:54.7492695Z  All:            false
+2025-09-07T13:08:54.7493015Z  Filters:        type==source.local,type==exec.cachemount,type==source.git.checkout
+2025-09-07T13:08:54.7493383Z  Keep Duration:  48h0m0s
+2025-09-07T13:08:54.7493586Z  Max Used Space: 488.3MiB
+2025-09-07T13:08:54.7493799Z GC Policy rule#1:
+2025-09-07T13:08:54.7493974Z  All:            false
+2025-09-07T13:08:54.7494178Z  Keep Duration:  1440h0m0s
+2025-09-07T13:08:54.7494381Z  Reserved Space: 7.451GiB
+2025-09-07T13:08:54.7494574Z  Max Used Space: 54.02GiB
+2025-09-07T13:08:54.7494767Z  Min Free Space: 13.97GiB
+2025-09-07T13:08:54.7494946Z GC Policy rule#2:
+2025-09-07T13:08:54.7495116Z  All:            false
+2025-09-07T13:08:54.7495292Z  Reserved Space: 7.451GiB
+2025-09-07T13:08:54.7495487Z  Max Used Space: 54.02GiB
+2025-09-07T13:08:54.7495670Z  Min Free Space: 13.97GiB
+2025-09-07T13:08:54.7495859Z GC Policy rule#3:
+2025-09-07T13:08:54.7496024Z  All:            true
+2025-09-07T13:08:54.7496206Z  Reserved Space: 7.451GiB
+2025-09-07T13:08:54.7496399Z  Max Used Space: 54.02GiB
+2025-09-07T13:08:54.7496588Z  Min Free Space: 13.97GiB
+2025-09-07T13:08:54.7529910Z ##[endgroup]
+2025-09-07T13:08:54.8448694Z ##[group]Inspect builder
+2025-09-07T13:08:54.8450378Z {
+2025-09-07T13:08:54.8450642Z   "nodes": [
+2025-09-07T13:08:54.8450915Z     {
+2025-09-07T13:08:54.8451325Z       "name": "builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90",
+2025-09-07T13:08:54.8451844Z       "endpoint": "unix:///var/run/docker.sock",
+2025-09-07T13:08:54.8452253Z       "status": "running",
+2025-09-07T13:08:54.8452741Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+2025-09-07T13:08:54.8453259Z       "buildkit": "v0.23.2",
+2025-09-07T13:08:54.8453626Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/386",
+2025-09-07T13:08:54.8454010Z       "features": {
+2025-09-07T13:08:54.8454299Z         "Automatically load images to the Docker Engine image store": true,
+2025-09-07T13:08:54.8454627Z         "Cache export": true,
+2025-09-07T13:08:54.8454937Z         "Direct push": true,
+2025-09-07T13:08:54.8455168Z         "Docker exporter": true,
+2025-09-07T13:08:54.8455399Z         "Multi-platform build": true,
+2025-09-07T13:08:54.8455634Z         "OCI exporter": true
+2025-09-07T13:08:54.8455830Z       },
+2025-09-07T13:08:54.8455987Z       "labels": {
+2025-09-07T13:08:54.8456216Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2025-09-07T13:08:54.8456572Z         "org.mobyproject.buildkit.worker.hostname": "3d26d870c5d9",
+2025-09-07T13:08:54.8457088Z         "org.mobyproject.buildkit.worker.network": "host",
+2025-09-07T13:08:54.8457459Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2025-09-07T13:08:54.8457852Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2025-09-07T13:08:54.8458468Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2025-09-07T13:08:54.8458784Z       },
+2025-09-07T13:08:54.8459220Z       "gcPolicy": [
+2025-09-07T13:08:54.8459398Z         {
+2025-09-07T13:08:54.8459552Z           "all": false,
+2025-09-07T13:08:54.8459743Z           "filter": [
+2025-09-07T13:08:54.8459930Z             "type==source.local",
+2025-09-07T13:08:54.8460177Z             "type==exec.cachemount",
+2025-09-07T13:08:54.8460414Z             "type==source.git.checkout"
+2025-09-07T13:08:54.8460801Z           ],
+2025-09-07T13:08:54.8460972Z           "keepDuration": "48h0m0s",
+2025-09-07T13:08:54.8461196Z           "maxUsedSpace": "488.3MiB"
+2025-09-07T13:08:54.8461394Z         },
+2025-09-07T13:08:54.8461548Z         {
+2025-09-07T13:08:54.8461699Z           "all": false,
+2025-09-07T13:08:54.8461900Z           "keepDuration": "1440h0m0s",
+2025-09-07T13:08:54.8462131Z           "reservedSpace": "7.451GiB",
+2025-09-07T13:08:54.8462356Z           "maxUsedSpace": "54.02GiB",
+2025-09-07T13:08:54.8462592Z           "minFreeSpace": "13.97GiB"
+2025-09-07T13:08:54.8462794Z         },
+2025-09-07T13:08:54.8462943Z         {
+2025-09-07T13:08:54.8463096Z           "all": false,
+2025-09-07T13:08:54.8463292Z           "reservedSpace": "7.451GiB",
+2025-09-07T13:08:54.8463511Z           "maxUsedSpace": "54.02GiB",
+2025-09-07T13:08:54.8463734Z           "minFreeSpace": "13.97GiB"
+2025-09-07T13:08:54.8463937Z         },
+2025-09-07T13:08:54.8464088Z         {
+2025-09-07T13:08:54.8464249Z           "all": true,
+2025-09-07T13:08:54.8464436Z           "reservedSpace": "7.451GiB",
+2025-09-07T13:08:54.8464659Z           "maxUsedSpace": "54.02GiB",
+2025-09-07T13:08:54.8464877Z           "minFreeSpace": "13.97GiB"
+2025-09-07T13:08:54.8465082Z         }
+2025-09-07T13:08:54.8465224Z       ]
+2025-09-07T13:08:54.8465372Z     }
+2025-09-07T13:08:54.8465513Z   ],
+2025-09-07T13:08:54.8465725Z   "name": "builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9",
+2025-09-07T13:08:54.8466009Z   "driver": "docker-container",
+2025-09-07T13:08:54.8466248Z   "lastActivity": "2025-09-07T13:08:52.000Z"
+2025-09-07T13:08:54.8466469Z }
+2025-09-07T13:08:54.8466797Z ##[endgroup]
+2025-09-07T13:08:54.8467098Z ##[group]BuildKit version
+2025-09-07T13:08:54.8467402Z builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90: v0.23.2
+2025-09-07T13:08:54.8467897Z ##[endgroup]
+2025-09-07T13:08:54.8593254Z ##[group]Run docker/login-action@v3
+2025-09-07T13:08:54.8593529Z with:
+2025-09-07T13:08:54.8593704Z   registry: ghcr.io
+2025-09-07T13:08:54.8593900Z   username: Bexull
+2025-09-07T13:08:54.8594336Z   password: ***
+2025-09-07T13:08:54.8594520Z   ecr: auto
+2025-09-07T13:08:54.8594688Z   logout: true
+2025-09-07T13:08:54.8594851Z env:
+2025-09-07T13:08:54.8595010Z   REGISTRY: ghcr.io
+2025-09-07T13:08:54.8595204Z   IMAGE_NAME: Bexull/Report_Bot
+2025-09-07T13:08:54.8595423Z ##[endgroup]
+2025-09-07T13:08:55.1876358Z Logging into ghcr.io...
+2025-09-07T13:08:55.3347677Z Login Succeeded!
+2025-09-07T13:08:55.3493857Z ##[group]Run docker/metadata-action@v5
+2025-09-07T13:08:55.3494282Z with:
+2025-09-07T13:08:55.3494575Z   images: ghcr.io/Bexull/Report_Bot
+2025-09-07T13:08:55.3495322Z   tags: type=ref,event=branch
+type=ref,event=pr
+type=sha,prefix={{branch}}-
+type=raw,value=latest,enable={{is_default_branch}}
+
+2025-09-07T13:08:55.3496033Z   context: workflow
+2025-09-07T13:08:55.3496503Z   github-token: ***
+2025-09-07T13:08:55.3496788Z env:
+2025-09-07T13:08:55.3497062Z   REGISTRY: ghcr.io
+2025-09-07T13:08:55.3497369Z   IMAGE_NAME: Bexull/Report_Bot
+2025-09-07T13:08:55.3497737Z ##[endgroup]
+2025-09-07T13:08:55.8724353Z ##[group]Context info
+2025-09-07T13:08:55.8724724Z eventName: push
+2025-09-07T13:08:55.8739809Z sha: 72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+2025-09-07T13:08:55.8741013Z ref: refs/heads/master
+2025-09-07T13:08:55.8742808Z workflow: Build and Deploy Docker Image
+2025-09-07T13:08:55.8743256Z action: meta
+2025-09-07T13:08:55.8743575Z actor: Bexull
+2025-09-07T13:08:55.8743980Z runNumber: 3
+2025-09-07T13:08:55.8744274Z runId: 17528968870
+2025-09-07T13:08:55.8744752Z commitDate: Sun Sep 07 2025 13:08:23 GMT+0000 (Coordinated Universal Time)
+2025-09-07T13:08:55.8745583Z ##[endgroup]
+2025-09-07T13:08:55.8746173Z ##[group]Processing images input
+2025-09-07T13:08:55.8746622Z name=ghcr.io/Bexull/Report_Bot,enable=true
+2025-09-07T13:08:55.8747297Z ##[endgroup]
+2025-09-07T13:08:55.8759930Z ##[group]Processing tags input
+2025-09-07T13:08:55.8793637Z type=ref,event=branch,enable=true,priority=600
+2025-09-07T13:08:55.8796474Z type=ref,event=pr,prefix=pr-,enable=true,priority=600
+2025-09-07T13:08:55.8800735Z type=raw,value=latest,enable={{is_default_branch}},priority=200
+2025-09-07T13:08:55.8801457Z type=sha,prefix={{branch}}-,format=short,enable=true,priority=100
+2025-09-07T13:08:55.8802434Z ##[endgroup]
+2025-09-07T13:08:55.8803034Z ##[group]Processing flavor input
+2025-09-07T13:08:55.8803432Z latest=auto
+2025-09-07T13:08:55.8803705Z prefix=
+2025-09-07T13:08:55.8804001Z prefixLatest=false
+2025-09-07T13:08:55.8804337Z suffix=
+2025-09-07T13:08:55.8804634Z suffixLatest=false
+2025-09-07T13:08:55.8805204Z ##[endgroup]
+2025-09-07T13:08:55.8868115Z ##[group]Docker image version
+2025-09-07T13:08:55.8896716Z master
+2025-09-07T13:08:55.8900877Z ##[endgroup]
+2025-09-07T13:08:55.8904672Z ##[group]Docker tags
+2025-09-07T13:08:55.8909790Z ghcr.io/bexull/report_bot:master
+2025-09-07T13:08:55.8913467Z ghcr.io/bexull/report_bot:master-72958ba
+2025-09-07T13:08:55.8917310Z ##[endgroup]
+2025-09-07T13:08:55.8970588Z ##[group]Docker labels
+2025-09-07T13:08:55.8974397Z org.opencontainers.image.created=2025-09-07T13:08:55.875Z
+2025-09-07T13:08:55.8977338Z org.opencontainers.image.description=
+2025-09-07T13:08:55.8980295Z org.opencontainers.image.licenses=
+2025-09-07T13:08:55.8983251Z org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+2025-09-07T13:08:55.8986394Z org.opencontainers.image.source=https://github.com/Bexull/Report_Bot
+2025-09-07T13:08:55.8989261Z org.opencontainers.image.title=Report_Bot
+2025-09-07T13:08:55.8992043Z org.opencontainers.image.url=https://github.com/Bexull/Report_Bot
+2025-09-07T13:08:55.9000683Z org.opencontainers.image.version=master
+2025-09-07T13:08:55.9001420Z ##[endgroup]
+2025-09-07T13:08:55.9005684Z ##[group]Annotations
+2025-09-07T13:08:55.9006211Z manifest:org.opencontainers.image.created=2025-09-07T13:08:55.875Z
+2025-09-07T13:08:55.9006892Z manifest:org.opencontainers.image.description=
+2025-09-07T13:08:55.9009028Z manifest:org.opencontainers.image.licenses=
+2025-09-07T13:08:55.9010419Z manifest:org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+2025-09-07T13:08:55.9011318Z manifest:org.opencontainers.image.source=https://github.com/Bexull/Report_Bot
+2025-09-07T13:08:55.9012189Z manifest:org.opencontainers.image.title=Report_Bot
+2025-09-07T13:08:55.9012924Z manifest:org.opencontainers.image.url=https://github.com/Bexull/Report_Bot
+2025-09-07T13:08:55.9013599Z manifest:org.opencontainers.image.version=master
+2025-09-07T13:08:55.9014282Z ##[endgroup]
+2025-09-07T13:08:55.9015077Z ##[group]JSON output
+2025-09-07T13:08:55.9015444Z {
+2025-09-07T13:08:55.9015726Z   "tags": [
+2025-09-07T13:08:55.9016056Z     "ghcr.io/bexull/report_bot:master",
+2025-09-07T13:08:55.9016550Z     "ghcr.io/bexull/report_bot:master-72958ba"
+2025-09-07T13:08:55.9016981Z   ],
+2025-09-07T13:08:55.9017257Z   "labels": {
+2025-09-07T13:08:55.9017709Z     "org.opencontainers.image.created": "2025-09-07T13:08:55.875Z",
+2025-09-07T13:08:55.9018343Z     "org.opencontainers.image.description": "",
+2025-09-07T13:08:55.9018730Z     "org.opencontainers.image.licenses": "",
+2025-09-07T13:08:55.9019589Z     "org.opencontainers.image.revision": "72958baa1b3e9d1878f1b1686c7d3cd928fba0d1",
+2025-09-07T13:08:55.9020349Z     "org.opencontainers.image.source": "https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9020948Z     "org.opencontainers.image.title": "Report_Bot",
+2025-09-07T13:08:55.9021524Z     "org.opencontainers.image.url": "https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9022135Z     "org.opencontainers.image.version": "master"
+2025-09-07T13:08:55.9022539Z   },
+2025-09-07T13:08:55.9022798Z   "annotations": [
+2025-09-07T13:08:55.9023277Z     "manifest:org.opencontainers.image.created=2025-09-07T13:08:55.875Z",
+2025-09-07T13:08:55.9023921Z     "manifest:org.opencontainers.image.description=",
+2025-09-07T13:08:55.9024451Z     "manifest:org.opencontainers.image.licenses=",
+2025-09-07T13:08:55.9025148Z     "manifest:org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1",
+2025-09-07T13:08:55.9026055Z     "manifest:org.opencontainers.image.source=https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9027061Z     "manifest:org.opencontainers.image.title=Report_Bot",
+2025-09-07T13:08:55.9027736Z     "manifest:org.opencontainers.image.url=https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9028426Z     "manifest:org.opencontainers.image.version=master"
+2025-09-07T13:08:55.9029058Z   ]
+2025-09-07T13:08:55.9029330Z }
+2025-09-07T13:08:55.9029808Z ##[endgroup]
+2025-09-07T13:08:55.9030461Z ##[group]Bake file definition (tags)
+2025-09-07T13:08:55.9030828Z {
+2025-09-07T13:08:55.9031071Z   "target": {
+2025-09-07T13:08:55.9031378Z     "docker-metadata-action": {
+2025-09-07T13:08:55.9031778Z       "tags": [
+2025-09-07T13:08:55.9032130Z         "ghcr.io/bexull/report_bot:master",
+2025-09-07T13:08:55.9032611Z         "ghcr.io/bexull/report_bot:master-72958ba"
+2025-09-07T13:08:55.9032878Z       ],
+2025-09-07T13:08:55.9033040Z       "args": {
+2025-09-07T13:08:55.9033271Z         "DOCKER_META_IMAGES": "ghcr.io/bexull/report_bot",
+2025-09-07T13:08:55.9033577Z         "DOCKER_META_VERSION": "master"
+2025-09-07T13:08:55.9033802Z       }
+2025-09-07T13:08:55.9033949Z     }
+2025-09-07T13:08:55.9034102Z   }
+2025-09-07T13:08:55.9034247Z }
+2025-09-07T13:08:55.9034554Z ##[endgroup]
+2025-09-07T13:08:55.9034874Z ##[group]Bake file definition (labels)
+2025-09-07T13:08:55.9035095Z {
+2025-09-07T13:08:55.9035250Z   "target": {
+2025-09-07T13:08:55.9035436Z     "docker-metadata-action": {
+2025-09-07T13:08:55.9035657Z       "labels": {
+2025-09-07T13:08:55.9035917Z         "org.opencontainers.image.created": "2025-09-07T13:08:55.875Z",
+2025-09-07T13:08:55.9036285Z         "org.opencontainers.image.description": "",
+2025-09-07T13:08:55.9036588Z         "org.opencontainers.image.licenses": "",
+2025-09-07T13:08:55.9036972Z         "org.opencontainers.image.revision": "72958baa1b3e9d1878f1b1686c7d3cd928fba0d1",
+2025-09-07T13:08:55.9037464Z         "org.opencontainers.image.source": "https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9037859Z         "org.opencontainers.image.title": "Report_Bot",
+2025-09-07T13:08:55.9038240Z         "org.opencontainers.image.url": "https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9038617Z         "org.opencontainers.image.version": "master"
+2025-09-07T13:08:55.9039145Z       }
+2025-09-07T13:08:55.9039308Z     }
+2025-09-07T13:08:55.9039459Z   }
+2025-09-07T13:08:55.9039601Z }
+2025-09-07T13:08:55.9039890Z ##[endgroup]
+2025-09-07T13:08:55.9040409Z ##[group]Bake file definition (annotations)
+2025-09-07T13:08:55.9040655Z {
+2025-09-07T13:08:55.9040810Z   "target": {
+2025-09-07T13:08:55.9041033Z     "docker-metadata-action": {
+2025-09-07T13:08:55.9041257Z       "annotations": [
+2025-09-07T13:08:55.9041551Z         "manifest:org.opencontainers.image.created=2025-09-07T13:08:55.875Z",
+2025-09-07T13:08:55.9041927Z         "manifest:org.opencontainers.image.description=",
+2025-09-07T13:08:55.9042242Z         "manifest:org.opencontainers.image.licenses=",
+2025-09-07T13:08:55.9042651Z         "manifest:org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1",
+2025-09-07T13:08:55.9043180Z         "manifest:org.opencontainers.image.source=https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9043610Z         "manifest:org.opencontainers.image.title=Report_Bot",
+2025-09-07T13:08:55.9044022Z         "manifest:org.opencontainers.image.url=https://github.com/Bexull/Report_Bot",
+2025-09-07T13:08:55.9044435Z         "manifest:org.opencontainers.image.version=master"
+2025-09-07T13:08:55.9044775Z       ]
+2025-09-07T13:08:55.9044929Z     }
+2025-09-07T13:08:55.9045294Z   }
+2025-09-07T13:08:55.9045555Z }
+2025-09-07T13:08:55.9046082Z ##[endgroup]
+2025-09-07T13:08:55.9612500Z ##[group]Run docker/build-push-action@v5
+2025-09-07T13:08:55.9612788Z with:
+2025-09-07T13:08:55.9612954Z   context: .
+2025-09-07T13:08:55.9613126Z   push: true
+2025-09-07T13:08:55.9613429Z   tags: ghcr.io/bexull/report_bot:master
+ghcr.io/bexull/report_bot:master-72958ba
+2025-09-07T13:08:55.9615104Z   labels: org.opencontainers.image.created=2025-09-07T13:08:55.875Z
+org.opencontainers.image.description=
+org.opencontainers.image.licenses=
+org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+org.opencontainers.image.source=https://github.com/Bexull/Report_Bot
+org.opencontainers.image.title=Report_Bot
+org.opencontainers.image.url=https://github.com/Bexull/Report_Bot
+org.opencontainers.image.version=master
+2025-09-07T13:08:55.9616816Z   cache-from: type=gha
+2025-09-07T13:08:55.9617025Z   cache-to: type=gha,mode=max
+2025-09-07T13:08:55.9617242Z   load: false
+2025-09-07T13:08:55.9617419Z   no-cache: false
+2025-09-07T13:08:55.9617591Z   pull: false
+2025-09-07T13:08:55.9617939Z   github-token: ***
+2025-09-07T13:08:55.9618127Z env:
+2025-09-07T13:08:55.9618294Z   REGISTRY: ghcr.io
+2025-09-07T13:08:55.9618494Z   IMAGE_NAME: Bexull/Report_Bot
+2025-09-07T13:08:55.9618740Z   DOCKER_METADATA_OUTPUT_VERSION: master
+2025-09-07T13:08:55.9619331Z   DOCKER_METADATA_OUTPUT_TAGS: ghcr.io/bexull/report_bot:master
+ghcr.io/bexull/report_bot:master-72958ba
+2025-09-07T13:08:55.9621144Z   DOCKER_METADATA_OUTPUT_LABELS: org.opencontainers.image.created=2025-09-07T13:08:55.875Z
+org.opencontainers.image.description=
+org.opencontainers.image.licenses=
+org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+org.opencontainers.image.source=https://github.com/Bexull/Report_Bot
+org.opencontainers.image.title=Report_Bot
+org.opencontainers.image.url=https://github.com/Bexull/Report_Bot
+org.opencontainers.image.version=master
+2025-09-07T13:08:55.9624337Z   DOCKER_METADATA_OUTPUT_ANNOTATIONS: manifest:org.opencontainers.image.created=2025-09-07T13:08:55.875Z
+manifest:org.opencontainers.image.description=
+manifest:org.opencontainers.image.licenses=
+manifest:org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1
+manifest:org.opencontainers.image.source=https://github.com/Bexull/Report_Bot
+manifest:org.opencontainers.image.title=Report_Bot
+manifest:org.opencontainers.image.url=https://github.com/Bexull/Report_Bot
+manifest:org.opencontainers.image.version=master
+2025-09-07T13:08:55.9629723Z   DOCKER_METADATA_OUTPUT_JSON: {"tags":["ghcr.io/bexull/report_bot:master","ghcr.io/bexull/report_bot:master-72958ba"],"labels":{"org.opencontainers.image.created":"2025-09-07T13:08:55.875Z","org.opencontainers.image.description":"","org.opencontainers.image.licenses":"","org.opencontainers.image.revision":"72958baa1b3e9d1878f1b1686c7d3cd928fba0d1","org.opencontainers.image.source":"https://github.com/Bexull/Report_Bot","org.opencontainers.image.title":"Report_Bot","org.opencontainers.image.url":"https://github.com/Bexull/Report_Bot","org.opencontainers.image.version":"master"},"annotations":["manifest:org.opencontainers.image.created=2025-09-07T13:08:55.875Z","manifest:org.opencontainers.image.description=","manifest:org.opencontainers.image.licenses=","manifest:org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1","manifest:org.opencontainers.image.source=https://github.com/Bexull/Report_Bot","manifest:org.opencontainers.image.title=Report_Bot","manifest:org.opencontainers.image.url=https://github.com/Bexull/Report_Bot","manifest:org.opencontainers.image.version=master"]}
+2025-09-07T13:08:55.9633741Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_TAGS: /home/runner/work/_temp/docker-actions-toolkit-vEjUFI/docker-metadata-action-bake-tags.json
+2025-09-07T13:08:55.9634585Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_LABELS: /home/runner/work/_temp/docker-actions-toolkit-vEjUFI/docker-metadata-action-bake-labels.json
+2025-09-07T13:08:55.9635471Z   DOCKER_METADATA_OUTPUT_BAKE_FILE_ANNOTATIONS: /home/runner/work/_temp/docker-actions-toolkit-vEjUFI/docker-metadata-action-bake-annotations.json
+2025-09-07T13:08:55.9636487Z   DOCKER_METADATA_OUTPUT_BAKE_FILE: /home/runner/work/_temp/docker-actions-toolkit-vEjUFI/docker-metadata-action-bake.json
+2025-09-07T13:08:55.9637059Z ##[endgroup]
+2025-09-07T13:08:56.2071211Z ##[group]GitHub Actions runtime token ACs
+2025-09-07T13:08:56.2088641Z refs/heads/master: read/write
+2025-09-07T13:08:56.2109927Z refs/heads/main: read
+2025-09-07T13:08:56.2110886Z ##[endgroup]
+2025-09-07T13:08:56.2111426Z ##[group]Docker info
+2025-09-07T13:08:56.2155545Z [command]/usr/bin/docker version
+2025-09-07T13:08:56.2399374Z Client: Docker Engine - Community
+2025-09-07T13:08:56.2403430Z  Version:           28.0.4
+2025-09-07T13:08:56.2403850Z  API version:       1.48
+2025-09-07T13:08:56.2404202Z  Go version:        go1.23.7
+2025-09-07T13:08:56.2404557Z  Git commit:        b8034c0
+2025-09-07T13:08:56.2404937Z  Built:             Tue Mar 25 15:07:16 2025
+2025-09-07T13:08:56.2405345Z  OS/Arch:           linux/amd64
+2025-09-07T13:08:56.2405700Z  Context:           default
+2025-09-07T13:08:56.2405933Z 
+2025-09-07T13:08:56.2406085Z Server: Docker Engine - Community
+2025-09-07T13:08:56.2406451Z  Engine:
+2025-09-07T13:08:56.2406719Z   Version:          28.0.4
+2025-09-07T13:08:56.2407096Z   API version:      1.48 (minimum version 1.24)
+2025-09-07T13:08:56.2407514Z   Go version:       go1.23.7
+2025-09-07T13:08:56.2407861Z   Git commit:       6430e49
+2025-09-07T13:08:56.2408193Z   Built:            Tue Mar 25 15:07:16 2025
+2025-09-07T13:08:56.2408438Z   OS/Arch:          linux/amd64
+2025-09-07T13:08:56.2408661Z   Experimental:     false
+2025-09-07T13:08:56.2409055Z  containerd:
+2025-09-07T13:08:56.2409244Z   Version:          1.7.27
+2025-09-07T13:08:56.2409496Z   GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+2025-09-07T13:08:56.2409773Z  runc:
+2025-09-07T13:08:56.2409936Z   Version:          1.2.5
+2025-09-07T13:08:56.2410154Z   GitCommit:        v1.2.5-0-g59923ef
+2025-09-07T13:08:56.2410394Z  docker-init:
+2025-09-07T13:08:56.2410581Z   Version:          0.19.0
+2025-09-07T13:08:56.2410792Z   GitCommit:        de40ad0
+2025-09-07T13:08:56.2448788Z [command]/usr/bin/docker info
+2025-09-07T13:08:56.3049044Z Client: Docker Engine - Community
+2025-09-07T13:08:56.3049491Z  Version:    28.0.4
+2025-09-07T13:08:56.3049803Z  Context:    default
+2025-09-07T13:08:56.3050109Z  Debug Mode: false
+2025-09-07T13:08:56.3050407Z  Plugins:
+2025-09-07T13:08:56.3050712Z   buildx: Docker Buildx (Docker Inc.)
+2025-09-07T13:08:56.3051120Z     Version:  v0.27.0
+2025-09-07T13:08:56.3051530Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2025-09-07T13:08:56.3052040Z   compose: Docker Compose (Docker Inc.)
+2025-09-07T13:08:56.3052435Z     Version:  v2.38.2
+2025-09-07T13:08:56.3052830Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2025-09-07T13:08:56.3053182Z 
+2025-09-07T13:08:56.3053292Z Server:
+2025-09-07T13:08:56.3053544Z  Containers: 1
+2025-09-07T13:08:56.3053823Z   Running: 1
+2025-09-07T13:08:56.3054094Z   Paused: 0
+2025-09-07T13:08:56.3054354Z   Stopped: 0
+2025-09-07T13:08:56.3054632Z  Images: 1
+2025-09-07T13:08:56.3054897Z  Server Version: 28.0.4
+2025-09-07T13:08:56.3055227Z  Storage Driver: overlay2
+2025-09-07T13:08:56.3055561Z   Backing Filesystem: extfs
+2025-09-07T13:08:56.3055910Z   Supports d_type: true
+2025-09-07T13:08:56.3056229Z   Using metacopy: false
+2025-09-07T13:08:56.3056552Z   Native Overlay Diff: false
+2025-09-07T13:08:56.3056925Z   userxattr: false
+2025-09-07T13:08:56.3057231Z  Logging Driver: json-file
+2025-09-07T13:08:56.3057571Z  Cgroup Driver: systemd
+2025-09-07T13:08:56.3057881Z  Cgroup Version: 2
+2025-09-07T13:08:56.3058162Z  Plugins:
+2025-09-07T13:08:56.3058423Z   Volume: local
+2025-09-07T13:08:56.3058771Z   Network: bridge host ipvlan macvlan null overlay
+2025-09-07T13:08:56.3059556Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2025-09-07T13:08:56.3060115Z  Swarm: inactive
+2025-09-07T13:08:56.3060435Z  Runtimes: io.containerd.runc.v2 runc
+2025-09-07T13:08:56.3060837Z  Default Runtime: runc
+2025-09-07T13:08:56.3061452Z  Init Binary: docker-init
+2025-09-07T13:08:56.3061913Z  containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+2025-09-07T13:08:56.3062420Z  runc version: v1.2.5-0-g59923ef
+2025-09-07T13:08:56.3062776Z  init version: de40ad0
+2025-09-07T13:08:56.3063091Z  Security Options:
+2025-09-07T13:08:56.3063374Z   apparmor
+2025-09-07T13:08:56.3063632Z   seccomp
+2025-09-07T13:08:56.3063890Z    Profile: builtin
+2025-09-07T13:08:56.3064351Z   cgroupns
+2025-09-07T13:08:56.3064624Z  Kernel Version: 6.11.0-1018-azure
+2025-09-07T13:08:56.3065016Z  Operating System: Ubuntu 24.04.3 LTS
+2025-09-07T13:08:56.3065390Z  OSType: linux
+2025-09-07T13:08:56.3065680Z  Architecture: x86_64
+2025-09-07T13:08:56.3065982Z  CPUs: 4
+2025-09-07T13:08:56.3066244Z  Total Memory: 15.62GiB
+2025-09-07T13:08:56.3066568Z  Name: pkrvm7jw40e0xgp
+2025-09-07T13:08:56.3066903Z  ID: 33a18c03-7dc8-4ab9-bfe1-99342b7c1aaf
+2025-09-07T13:08:56.3067317Z  Docker Root Dir: /var/lib/docker
+2025-09-07T13:08:56.3067679Z  Debug Mode: false
+2025-09-07T13:08:56.3067986Z  Username: githubactions
+2025-09-07T13:08:56.3068308Z  Experimental: false
+2025-09-07T13:08:56.3068618Z  Insecure Registries:
+2025-09-07T13:08:56.3069140Z   ::1/128
+2025-09-07T13:08:56.3069392Z   127.0.0.0/8
+2025-09-07T13:08:56.3069667Z  Live Restore Enabled: false
+2025-09-07T13:08:56.3069898Z 
+2025-09-07T13:08:56.3075704Z ##[endgroup]
+2025-09-07T13:08:56.3076216Z ##[group]Proxy configuration
+2025-09-07T13:08:56.3080353Z No proxy configuration found
+2025-09-07T13:08:56.3081693Z ##[endgroup]
+2025-09-07T13:08:56.3722259Z ##[group]Buildx version
+2025-09-07T13:08:56.3749705Z [command]/usr/bin/docker buildx version
+2025-09-07T13:08:56.4260071Z github.com/docker/buildx v0.27.0 bac71def78b077ee6a2607119f88e291861b18ac
+2025-09-07T13:08:56.4291019Z ##[endgroup]
+2025-09-07T13:08:56.4291538Z ##[group]Builder info
+2025-09-07T13:08:56.5238742Z {
+2025-09-07T13:08:56.5239311Z   "nodes": [
+2025-09-07T13:08:56.5239620Z     {
+2025-09-07T13:08:56.5240039Z       "name": "builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90",
+2025-09-07T13:08:56.5240626Z       "endpoint": "unix:///var/run/docker.sock",
+2025-09-07T13:08:56.5241112Z       "status": "running",
+2025-09-07T13:08:56.5241919Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+2025-09-07T13:08:56.5243012Z       "buildkit": "v0.23.2",
+2025-09-07T13:08:56.5243516Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/386",
+2025-09-07T13:08:56.5244071Z       "features": {
+2025-09-07T13:08:56.5244568Z         "Automatically load images to the Docker Engine image store": true,
+2025-09-07T13:08:56.5245162Z         "Cache export": true,
+2025-09-07T13:08:56.5245564Z         "Direct push": true,
+2025-09-07T13:08:56.5245946Z         "Docker exporter": true,
+2025-09-07T13:08:56.5246374Z         "Multi-platform build": true,
+2025-09-07T13:08:56.5246791Z         "OCI exporter": true
+2025-09-07T13:08:56.5247145Z       },
+2025-09-07T13:08:56.5247431Z       "labels": {
+2025-09-07T13:08:56.5247835Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2025-09-07T13:08:56.5248471Z         "org.mobyproject.buildkit.worker.hostname": "3d26d870c5d9",
+2025-09-07T13:08:56.5249336Z         "org.mobyproject.buildkit.worker.network": "host",
+2025-09-07T13:08:56.5250012Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2025-09-07T13:08:56.5250736Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2025-09-07T13:08:56.5251440Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2025-09-07T13:08:56.5251945Z       },
+2025-09-07T13:08:56.5252235Z       "gcPolicy": [
+2025-09-07T13:08:56.5252530Z         {
+2025-09-07T13:08:56.5252813Z           "all": false,
+2025-09-07T13:08:56.5253144Z           "filter": [
+2025-09-07T13:08:56.5253479Z             "type==source.local",
+2025-09-07T13:08:56.5253884Z             "type==exec.cachemount",
+2025-09-07T13:08:56.5254300Z             "type==source.git.checkout"
+2025-09-07T13:08:56.5254705Z           ],
+2025-09-07T13:08:56.5255357Z           "keepDuration": "48h0m0s"
+2025-09-07T13:08:56.5255788Z         },
+2025-09-07T13:08:56.5256062Z         {
+2025-09-07T13:08:56.5256346Z           "all": false,
+2025-09-07T13:08:56.5256699Z           "keepDuration": "1440h0m0s"
+2025-09-07T13:08:56.5257104Z         },
+2025-09-07T13:08:56.5257396Z         {
+2025-09-07T13:08:56.5257685Z           "all": false
+2025-09-07T13:08:56.5258003Z         },
+2025-09-07T13:08:56.5258531Z         {
+2025-09-07T13:08:56.5259873Z           "all": true
+2025-09-07T13:08:56.5260249Z         }
+2025-09-07T13:08:56.5260541Z       ]
+2025-09-07T13:08:56.5260829Z     }
+2025-09-07T13:08:56.5261095Z   ],
+2025-09-07T13:08:56.5261470Z   "name": "builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9",
+2025-09-07T13:08:56.5261958Z   "driver": "docker-container",
+2025-09-07T13:08:56.5262417Z   "lastActivity": "2025-09-07T13:08:52.000Z"
+2025-09-07T13:08:56.5262820Z }
+2025-09-07T13:08:56.5263435Z ##[endgroup]
+2025-09-07T13:08:56.7020213Z [command]/usr/bin/docker buildx build --cache-from type=gha --cache-to type=gha,mode=max --iidfile /home/runner/work/_temp/docker-actions-toolkit-5L12CK/build-iidfile-8348b30161.txt --label org.opencontainers.image.created=2025-09-07T13:08:55.875Z --label org.opencontainers.image.description= --label org.opencontainers.image.licenses= --label org.opencontainers.image.revision=72958baa1b3e9d1878f1b1686c7d3cd928fba0d1 --label org.opencontainers.image.source=https://github.com/Bexull/Report_Bot --label org.opencontainers.image.title=Report_Bot --label org.opencontainers.image.url=https://github.com/Bexull/Report_Bot --label org.opencontainers.image.version=master --attest type=provenance,mode=max,builder-id=https://github.com/Bexull/Report_Bot/actions/runs/17528968870 --tag ghcr.io/bexull/report_bot:master --tag ghcr.io/bexull/report_bot:master-72958ba --metadata-file /home/runner/work/_temp/docker-actions-toolkit-5L12CK/build-metadata-8d9347dd58.json --push .
+2025-09-07T13:08:57.0327968Z #0 building with "builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9" instance using docker-container driver
+2025-09-07T13:08:57.0328677Z 
+2025-09-07T13:08:57.0329060Z #1 [internal] load build definition from Dockerfile
+2025-09-07T13:08:57.0329544Z #1 transferring dockerfile: 979B done
+2025-09-07T13:08:57.0329922Z #1 DONE 0.0s
+2025-09-07T13:08:57.0330095Z 
+2025-09-07T13:08:57.0330349Z #2 [auth] library/python:pull token for registry-1.docker.io
+2025-09-07T13:08:57.0330827Z #2 DONE 0.0s
+2025-09-07T13:08:57.0331001Z 
+2025-09-07T13:08:57.0331267Z #3 [internal] load metadata for docker.io/library/python:3.11-slim
+2025-09-07T13:08:57.1719372Z #3 DONE 0.3s
+2025-09-07T13:08:57.2832758Z 
+2025-09-07T13:08:57.2834392Z #4 [internal] load .dockerignore
+2025-09-07T13:08:57.2834881Z #4 transferring context: 566B done
+2025-09-07T13:08:57.2835361Z #4 DONE 0.0s
+2025-09-07T13:08:57.2835584Z 
+2025-09-07T13:08:57.2835787Z #5 [internal] load build context
+2025-09-07T13:08:57.2836318Z #5 DONE 0.0s
+2025-09-07T13:08:57.2836555Z 
+2025-09-07T13:08:57.2837190Z #6 [1/7] FROM docker.io/library/python:3.11-slim@sha256:1d6131b5d479888b43200645e03a78443c7157efbdb730e6b48129740727c312
+2025-09-07T13:08:57.2838416Z #6 resolve docker.io/library/python:3.11-slim@sha256:1d6131b5d479888b43200645e03a78443c7157efbdb730e6b48129740727c312 done
+2025-09-07T13:08:57.2839398Z #6 DONE 0.0s
+2025-09-07T13:08:57.2839556Z 
+2025-09-07T13:08:57.2839752Z #7 importing cache manifest from gha:31592074924914055
+2025-09-07T13:08:57.2840205Z #7 DONE 0.1s
+2025-09-07T13:08:57.4031999Z 
+2025-09-07T13:08:57.4032599Z #5 [internal] load build context
+2025-09-07T13:08:57.4034654Z #5 transferring context: 78.15kB 0.0s done
+2025-09-07T13:08:57.4035117Z #5 DONE 0.0s
+2025-09-07T13:08:57.4035284Z 
+2025-09-07T13:08:57.4035408Z #8 [2/7] WORKDIR /app
+2025-09-07T13:08:57.4035721Z #8 CACHED
+2025-09-07T13:08:57.4035882Z 
+2025-09-07T13:08:57.4036302Z #9 [3/7] RUN apt-get update && apt-get install -y     gcc     libpq-dev     && rm -rf /var/lib/apt/lists/*
+2025-09-07T13:08:57.4036957Z #9 CACHED
+2025-09-07T13:08:57.4037120Z 
+2025-09-07T13:08:57.4037268Z #10 [4/7] COPY requirements.txt .
+2025-09-07T13:08:57.4037972Z #10 CACHED
+2025-09-07T13:08:57.4038158Z 
+2025-09-07T13:08:57.4038413Z #11 [5/7] RUN pip install --no-cache-dir -r requirements.txt
+2025-09-07T13:08:57.4039636Z #11 sha256:9a314af60e1f718775e4fd3cd3c5e19c347a23be7c97f044b386dfb630217168 93B / 93B 0.0s done
+2025-09-07T13:08:57.5109108Z #11 sha256:8cc50b7f96504b23ffc843571cfbdecc53513384d7f9c7e2c2bf4a046cf22bdb 200B / 200B 0.0s done
+2025-09-07T13:08:57.5113309Z #11 sha256:1961ca026b04e3e3720545ee5a8e05e60692056663c685c5d2437bf3ad9e6e08 249B / 249B 0.0s done
+2025-09-07T13:08:57.5116731Z #11 sha256:fcec5a125fd8f69ba9d5c3fd9ecf3810f95775d4d5694ed731adcdeae1cff909 1.29MB / 1.29MB 0.1s done
+2025-09-07T13:08:57.5117928Z #11 sha256:8d3076f82aed8861a842f7b0e82f769da4f51f4ae0dec7462ffd960af44808ca 1.13MB / 14.68MB 0.2s
+2025-09-07T13:08:57.6272263Z #11 sha256:8d3076f82aed8861a842f7b0e82f769da4f51f4ae0dec7462ffd960af44808ca 14.68MB / 14.68MB 0.2s done
+2025-09-07T13:08:57.6275280Z #11 sha256:733c7a6228d4bcb3f5c19ad9a99a3e7bfcffb32e44eab61f20e22a040c705a3f 15.73MB / 78.95MB 0.2s
+2025-09-07T13:08:57.6276687Z #11 sha256:a27cb4be70170df84ec3045fb7d33b3eb7018cb39fc029037429d9f06362737f 14.64MB / 14.64MB 0.1s done
+2025-09-07T13:08:57.6277913Z #11 sha256:396b1da7636e2dcd10565cb4f2f952cbb4a8a38b58d3b86a2cacb172fb70117c 1.05MB / 29.77MB 0.2s
+2025-09-07T13:08:57.7755421Z #11 sha256:733c7a6228d4bcb3f5c19ad9a99a3e7bfcffb32e44eab61f20e22a040c705a3f 35.65MB / 78.95MB 0.3s
+2025-09-07T13:08:57.7756569Z #11 sha256:396b1da7636e2dcd10565cb4f2f952cbb4a8a38b58d3b86a2cacb172fb70117c 19.92MB / 29.77MB 0.3s
+2025-09-07T13:08:57.8780323Z #11 sha256:733c7a6228d4bcb3f5c19ad9a99a3e7bfcffb32e44eab61f20e22a040c705a3f 48.23MB / 78.95MB 0.5s
+2025-09-07T13:08:57.8781514Z #11 sha256:396b1da7636e2dcd10565cb4f2f952cbb4a8a38b58d3b86a2cacb172fb70117c 29.77MB / 29.77MB 0.4s done
+2025-09-07T13:08:58.0233330Z #11 sha256:733c7a6228d4bcb3f5c19ad9a99a3e7bfcffb32e44eab61f20e22a040c705a3f 78.95MB / 78.95MB 0.7s done
+2025-09-07T13:08:58.0235677Z #11 extracting sha256:396b1da7636e2dcd10565cb4f2f952cbb4a8a38b58d3b86a2cacb172fb70117c
+2025-09-07T13:08:58.6427954Z #11 extracting sha256:396b1da7636e2dcd10565cb4f2f952cbb4a8a38b58d3b86a2cacb172fb70117c 0.8s done
+2025-09-07T13:08:58.6428767Z #11 DONE 1.3s
+2025-09-07T13:08:58.8703229Z 
+2025-09-07T13:08:58.8704307Z #11 [5/7] RUN pip install --no-cache-dir -r requirements.txt
+2025-09-07T13:08:58.8706147Z #11 extracting sha256:fcec5a125fd8f69ba9d5c3fd9ecf3810f95775d4d5694ed731adcdeae1cff909 0.1s done
+2025-09-07T13:08:58.8707248Z #11 extracting sha256:a27cb4be70170df84ec3045fb7d33b3eb7018cb39fc029037429d9f06362737f
+2025-09-07T13:08:59.1551134Z #11 extracting sha256:a27cb4be70170df84ec3045fb7d33b3eb7018cb39fc029037429d9f06362737f 0.4s done
+2025-09-07T13:08:59.1552236Z #11 DONE 1.9s
+2025-09-07T13:08:59.3131356Z 
+2025-09-07T13:08:59.3131766Z #11 [5/7] RUN pip install --no-cache-dir -r requirements.txt
+2025-09-07T13:08:59.3132558Z #11 extracting sha256:1961ca026b04e3e3720545ee5a8e05e60692056663c685c5d2437bf3ad9e6e08 done
+2025-09-07T13:08:59.3133541Z #11 extracting sha256:9a314af60e1f718775e4fd3cd3c5e19c347a23be7c97f044b386dfb630217168 done
+2025-09-07T13:08:59.3134491Z #11 extracting sha256:733c7a6228d4bcb3f5c19ad9a99a3e7bfcffb32e44eab61f20e22a040c705a3f
+2025-09-07T13:09:00.4413912Z #11 extracting sha256:733c7a6228d4bcb3f5c19ad9a99a3e7bfcffb32e44eab61f20e22a040c705a3f 1.3s done
+2025-09-07T13:09:00.4414622Z #11 DONE 3.1s
+2025-09-07T13:09:00.5956899Z 
+2025-09-07T13:09:00.5957361Z #11 [5/7] RUN pip install --no-cache-dir -r requirements.txt
+2025-09-07T13:09:00.5958152Z #11 extracting sha256:8cc50b7f96504b23ffc843571cfbdecc53513384d7f9c7e2c2bf4a046cf22bdb done
+2025-09-07T13:09:00.5959238Z #11 extracting sha256:8d3076f82aed8861a842f7b0e82f769da4f51f4ae0dec7462ffd960af44808ca
+2025-09-07T13:09:00.8960679Z #11 extracting sha256:8d3076f82aed8861a842f7b0e82f769da4f51f4ae0dec7462ffd960af44808ca 0.5s done
+2025-09-07T13:09:00.8961728Z #11 DONE 3.6s
+2025-09-07T13:09:01.0465751Z 
+2025-09-07T13:09:01.0466122Z #12 [6/7] COPY . .
+2025-09-07T13:09:01.7095865Z #12 DONE 0.8s
+2025-09-07T13:09:01.8119886Z 
+2025-09-07T13:09:01.8121146Z #13 [7/7] RUN useradd --create-home --shell /bin/bash app     && chown -R app:app /app
+2025-09-07T13:09:01.8121628Z #13 DONE 0.1s
+2025-09-07T13:09:02.0299155Z 
+2025-09-07T13:09:02.0299614Z #14 [auth] bexull/report_bot:pull,push token for ghcr.io
+2025-09-07T13:09:02.0300110Z #14 DONE 0.0s
+2025-09-07T13:09:02.0300227Z 
+2025-09-07T13:09:02.0300316Z #15 exporting to image
+2025-09-07T13:09:02.0300825Z #15 exporting layers 0.0s done
+2025-09-07T13:09:02.0301303Z #15 exporting manifest sha256:df1faf4966328c3f0ffb11f50b7e82db356fcd46a93a1aa1c27dc51c5ad630ba done
+2025-09-07T13:09:02.0302000Z #15 exporting config sha256:9175d83bceb2ae065db42ee1a0b57985f1f858b1efad1990d9f841dba6f85047 done
+2025-09-07T13:09:02.0302735Z #15 exporting attestation manifest sha256:86ea2972cd1f729edf586b37a6075cca2d31855c323d64162191bbd936829722 done
+2025-09-07T13:09:02.0303482Z #15 exporting manifest list sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc done
+2025-09-07T13:09:02.0303999Z #15 pushing layers
+2025-09-07T13:09:02.9033605Z #15 pushing layers 1.0s done
+2025-09-07T13:09:02.9034780Z #15 pushing manifest for ghcr.io/bexull/report_bot:master@sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc
+2025-09-07T13:09:03.7504930Z #15 pushing manifest for ghcr.io/bexull/report_bot:master@sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc 0.8s done
+2025-09-07T13:09:03.9861165Z #15 pushing layers 0.1s done
+2025-09-07T13:09:03.9861916Z #15 pushing manifest for ghcr.io/bexull/report_bot:master-72958ba@sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc
+2025-09-07T13:09:04.1952091Z #15 pushing manifest for ghcr.io/bexull/report_bot:master-72958ba@sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc 0.4s done
+2025-09-07T13:09:04.1953126Z #15 DONE 2.4s
+2025-09-07T13:09:04.1953299Z 
+2025-09-07T13:09:04.1953448Z #16 exporting to GitHub Actions Cache
+2025-09-07T13:09:04.1953868Z #16 preparing build cache for export
+2025-09-07T13:09:04.3310977Z #16 writing layer sha256:44947b89ddf82a7523a6dea381c5dce8ff1c614bc4549bcc9bf78c35d827e696 0.1s done
+2025-09-07T13:09:04.4696029Z #16 writing layer sha256:fcdc651457a2ad746a66c97df4c3512cd3925b80bf4e0455f20173891ee8a706 0.1s done
+2025-09-07T13:09:04.5935927Z #16 preparing build cache for export 0.4s done
+2025-09-07T13:09:04.5936810Z #16 DONE 0.4s
+2025-09-07T13:09:04.6149835Z 
+2025-09-07T13:09:04.6150266Z #17 resolving provenance for metadata file
+2025-09-07T13:09:04.6150691Z #17 DONE 0.0s
+2025-09-07T13:09:04.6216781Z ##[group]ImageID
+2025-09-07T13:09:04.6217290Z sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc
+2025-09-07T13:09:04.6219028Z ##[endgroup]
+2025-09-07T13:09:04.6219508Z ##[group]Digest
+2025-09-07T13:09:04.6219984Z sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc
+2025-09-07T13:09:04.6220736Z ##[endgroup]
+2025-09-07T13:09:04.6221613Z ##[group]Metadata
+2025-09-07T13:09:04.6222188Z {
+2025-09-07T13:09:04.6222496Z   "buildx.build.provenance": {
+2025-09-07T13:09:04.6222881Z     "builder": {
+2025-09-07T13:09:04.6223324Z       "id": "https://github.com/Bexull/Report_Bot/actions/runs/17528968870"
+2025-09-07T13:09:04.6223831Z     },
+2025-09-07T13:09:04.6224089Z     "buildType": "https://mobyproject.org/buildkit@v1",
+2025-09-07T13:09:04.6224372Z     "materials": [
+2025-09-07T13:09:04.6224549Z       {
+2025-09-07T13:09:04.6224783Z         "uri": "pkg:docker/python@3.11-slim?platform=linux%2Famd64",
+2025-09-07T13:09:04.6225081Z         "digest": {
+2025-09-07T13:09:04.6225390Z           "sha256": "1d6131b5d479888b43200645e03a78443c7157efbdb730e6b48129740727c312"
+2025-09-07T13:09:04.6225729Z         }
+2025-09-07T13:09:04.6225881Z       }
+2025-09-07T13:09:04.6226034Z     ],
+2025-09-07T13:09:04.6226185Z     "invocation": {
+2025-09-07T13:09:04.6226372Z       "configSource": {},
+2025-09-07T13:09:04.6226572Z       "parameters": {
+2025-09-07T13:09:04.6226773Z         "frontend": "dockerfile.v0",
+2025-09-07T13:09:04.6226986Z         "args": {
+2025-09-07T13:09:04.6227467Z           "label:org.opencontainers.image.created": "2025-09-07T13:08:55.875Z",
+2025-09-07T13:09:04.6227861Z           "label:org.opencontainers.image.description": "",
+2025-09-07T13:09:04.6228190Z           "label:org.opencontainers.image.licenses": "",
+2025-09-07T13:09:04.6228603Z           "label:org.opencontainers.image.revision": "72958baa1b3e9d1878f1b1686c7d3cd928fba0d1",
+2025-09-07T13:09:04.6230073Z           "label:org.opencontainers.image.source": "https://github.com/Bexull/Report_Bot",
+2025-09-07T13:09:04.6230518Z           "label:org.opencontainers.image.title": "Report_Bot",
+2025-09-07T13:09:04.6230925Z           "label:org.opencontainers.image.url": "https://github.com/Bexull/Report_Bot",
+2025-09-07T13:09:04.6231337Z           "label:org.opencontainers.image.version": "master"
+2025-09-07T13:09:04.6231597Z         },
+2025-09-07T13:09:04.6231758Z         "locals": [
+2025-09-07T13:09:04.6231924Z           {
+2025-09-07T13:09:04.6232091Z             "name": "context"
+2025-09-07T13:09:04.6232292Z           },
+2025-09-07T13:09:04.6232450Z           {
+2025-09-07T13:09:04.6232621Z             "name": "dockerfile"
+2025-09-07T13:09:04.6232817Z           }
+2025-09-07T13:09:04.6232968Z         ]
+2025-09-07T13:09:04.6233110Z       },
+2025-09-07T13:09:04.6233266Z       "environment": {
+2025-09-07T13:09:04.6233455Z         "platform": "linux/amd64"
+2025-09-07T13:09:04.6233661Z       }
+2025-09-07T13:09:04.6233808Z     }
+2025-09-07T13:09:04.6233956Z   },
+2025-09-07T13:09:04.6234442Z   "buildx.build.ref": "builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9/builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e90/sukk7rd7xokj96sb0lsfmatn0",
+2025-09-07T13:09:04.6235015Z   "containerimage.descriptor": {
+2025-09-07T13:09:04.6235308Z     "mediaType": "application/vnd.oci.image.index.v1+json",
+2025-09-07T13:09:04.6235742Z     "digest": "sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc",
+2025-09-07T13:09:04.6236119Z     "size": 856
+2025-09-07T13:09:04.6236280Z   },
+2025-09-07T13:09:04.6236638Z   "containerimage.digest": "sha256:52a8bae238b3b2a46fea956b1f48fa2b086ff43dffed6f4351c20a5d86f800dc",
+2025-09-07T13:09:04.6237220Z   "image.name": "ghcr.io/bexull/report_bot:master,ghcr.io/bexull/report_bot:master-72958ba"
+2025-09-07T13:09:04.6237589Z }
+2025-09-07T13:09:04.6237912Z ##[endgroup]
+2025-09-07T13:09:04.6345022Z Post job cleanup.
+2025-09-07T13:09:04.8499446Z ##[group]Removing temp folder /home/runner/work/_temp/docker-actions-toolkit-5L12CK
+2025-09-07T13:09:04.8513990Z ##[endgroup]
+2025-09-07T13:09:04.8514568Z ##[group]Post cache
+2025-09-07T13:09:04.8517072Z State not set
+2025-09-07T13:09:04.8517642Z ##[endgroup]
+2025-09-07T13:09:04.8619124Z Post job cleanup.
+2025-09-07T13:09:05.1923667Z [command]/usr/bin/docker logout ghcr.io
+2025-09-07T13:09:05.2048790Z Removing login credentials for ghcr.io
+2025-09-07T13:09:05.2082037Z ##[group]Post cache
+2025-09-07T13:09:05.2083652Z State not set
+2025-09-07T13:09:05.2085120Z ##[endgroup]
+2025-09-07T13:09:05.2208049Z Post job cleanup.
+2025-09-07T13:09:05.5028722Z ##[group]Removing builder
+2025-09-07T13:09:05.5966296Z [command]/usr/bin/docker buildx rm builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9
+2025-09-07T13:09:06.1364764Z builder-5d6481da-89a1-4ae8-9f70-61cc32bec7e9 removed
+2025-09-07T13:09:06.1406611Z ##[endgroup]
+2025-09-07T13:09:06.1408225Z ##[group]Cleaning up certificates
+2025-09-07T13:09:06.1414570Z ##[endgroup]
+2025-09-07T13:09:06.1415176Z ##[group]Post cache
+2025-09-07T13:09:06.1417324Z State not set
+2025-09-07T13:09:06.1417996Z ##[endgroup]
+2025-09-07T13:09:06.1592964Z Post job cleanup.
+2025-09-07T13:09:06.2528069Z [command]/usr/bin/git version
+2025-09-07T13:09:06.2563830Z git version 2.51.0
+2025-09-07T13:09:06.2608020Z Temporarily overriding HOME='/home/runner/work/_temp/57e678df-92e2-4fdd-bafa-08ce62b450f6' before making global git config changes
+2025-09-07T13:09:06.2609448Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-07T13:09:06.2621276Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Report_Bot/Report_Bot
+2025-09-07T13:09:06.2656328Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-07T13:09:06.2689367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-07T13:09:06.2916821Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-07T13:09:06.2937006Z http.https://github.com/.extraheader
+2025-09-07T13:09:06.2950158Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-07T13:09:06.2979917Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-07T13:09:06.3299656Z Cleaning up orphan processes
